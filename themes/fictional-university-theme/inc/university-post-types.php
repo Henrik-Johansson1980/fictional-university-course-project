@@ -92,7 +92,7 @@
       register_post_type('like', array(
         'show_in_rest' => false,
         'supports' => array('title'),
-        'public' => false,
+        'public' => true,
         'show_ui' => true,
         'labels' => array(
           'name' => 'Likes',
@@ -102,6 +102,22 @@
           'singular_name' => 'Like'
         ),
         'menu_icon' => 'dashicons-heart'
+      ));
+
+      //Slide post type for dynamic slider
+      register_post_type('slide', array(
+        'show_in_rest' => false,
+        'supports' => array('editor'),
+        'public' => false,
+        'show_ui' => true,
+        'labels' => array(
+          'name' => 'Slides',
+          'add_new_item' => 'Add New Slide',
+          'edit_item' => 'Edit Slide',
+          'all_items' => 'All Slides',
+          'singular_name' => 'Slide'
+        ),
+        'menu_icon' => 'dashicons-images-alt2'
       ));
     }
 
